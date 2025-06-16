@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛍️ Bro's Store</h1>
+  </header>
+
+  <main class="container">
+    <aside class="filters">
+      <h2>Filters</h2>
+      <div>
+        <label>Category:</label>
+        <select id="categoryFilter">
+          <option value="all">All</option>
+        </select>
+      </div>
+      <div>
+        <label>Price (max):</label>
+        <input type="range" id="priceFilter" min="0" max="5000" value="5000" />
+        <span id="priceValue">₹5000</span>
+      </div>
+    </aside>
+
+    <section class="main-content">
+      <div class="sort-bar">
+        <label>Sort By:</label>
+        <select id="sortOption">
+          <option value="default">Default</option>
+          <option value="priceLowHigh">Price: Low to High</option>
+          <option value="priceHighLow">Price: High to Low</option>
+          <option value="ratingHighLow">Rating: High to Low</option>
+        </select>
+      </div>
+      <div id="productList" class="products-grid"></div>
+    </section>
+  </main>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
